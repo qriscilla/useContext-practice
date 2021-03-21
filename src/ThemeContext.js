@@ -1,0 +1,3 @@
+/*
+    This component extracts all of the logic for our theme info.
+*/
