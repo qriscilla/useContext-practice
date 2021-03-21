@@ -1,9 +1,10 @@
 import React from 'react';
 import { useTheme, useThemeUpdate } from './ThemeContext';
 
-export default function FunctionContext() {
+const FunctionContext = () => {
     const darkTheme = useTheme();
     const toggleTheme = useThemeUpdate();
+
     const themeStyles = {
         backgroundColor: darkTheme ? '#333' : '#ccc',
         color: darkTheme ? '#ccc' : '#333',
@@ -13,11 +14,18 @@ export default function FunctionContext() {
 
     return (
         <>
-            <button onClick={toggleTheme}>Toggle Theme</button>
-            <div style={themeStyles}>Function Theme</div>
+            <button onClick={toggleTheme}>
+                Toggle Theme
+            </button>
+
+            <div style={themeStyles}>
+                Function Theme
+            </div>
         </>
-    )
+    );
 }
+
+export default FunctionContext;
 
 /*
     Instead of wrapping the returned value with ThemeContext.Consumer (like we did in ClassContext.js),

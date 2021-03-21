@@ -2,13 +2,15 @@ import React from 'react';
 import FunctionContext from './FunctionContext';
 import { ThemeProvider } from './ThemeContext';
 
-export default function App() {
+const App = () => {
   return (
     <ThemeProvider>
       <FunctionContext />
     </ThemeProvider>
-  )
+  );
 }
+
+export default App;
 
 /*
   Context is broken into two sections:
